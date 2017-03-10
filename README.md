@@ -15,6 +15,8 @@
 ### Problems for you
 
 Snippet 1 - Big O:
+1) O(n)
+2) this has to iterate over everything in the array, so big O will increase linearly with the size of the array
 ```ruby
 def largest?(array, value)
   array.each do |item|
@@ -25,6 +27,8 @@ end
 ```
 
 Snippet 2 - Big O:
+1) O(n)
+2) this is also linear, depending on the size of the customer hash; making two iterations in sequence doesn't alter the efficiency
 ```ruby
 def info_dump(customers)
   puts "Customer Names: "
@@ -39,6 +43,8 @@ end
 ```
 
 Snippet 3 - Big O:
+1) O(1)
+2) this is constant -- the time to access the first element wouldn't depend on the size of the array
 ```ruby
 def first_element_is_red?(array)
   array[0] == 'red' ? true : false
@@ -46,6 +52,8 @@ end
 ```
 
 Snippet 4 - Big O:
+1) O(n^2)
+2) these nested loops both have to iterate over the whole array, so this process will execute n^2 times.
 ```ruby
 def duplicates?(array)
   array.each_with_index do |item1, index1|
@@ -59,6 +67,8 @@ end
 ```
 
 Snippet 5 - Big O:
+1) O(1) if these arrays don't change, O(n * m) if they do
+2) this iterates over each array in turn, so the total iterations are dependent on the product of the size of each of the arrays
 ```ruby
 words = [chocolate, coconut, rainbow]
 endings = [cookie, pie, waffle]
@@ -71,6 +81,8 @@ end
 ```
 
 Snippet 6 - Big O:
+1)O(n)
+2) the time to iterate over this array will increase linearly with the size of the array
 ```ruby
 numbers = # some array (you don't know contents)
 
@@ -80,6 +92,8 @@ end
 ```
 
 Snippet 7 - Big O:
+1)O(n^2)
+2) the outer each iteration must cycle about n times (where n is the size of num), and the inner while loop is also dependent on the size of the array
 ```ruby
 # this is insertion sort
 (2...num.length).each do |j|
@@ -94,6 +108,8 @@ end
 ```
 
 Snippet 8 - Big O:
+1)O(n^2)
+2) each of these nested loops is dependent on n, so they will require n^2 time to run in conjunction
 ```ruby
 # this is selection sort
 n.times do |i|
