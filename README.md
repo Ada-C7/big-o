@@ -14,7 +14,7 @@
 
 ### Problems for you
 
-Snippet 1 - Big O:
+Snippet 1 - Big O: O(n), because in the worst case, the loop will iterate the same number of times as the length of the array.
 ```ruby
 def largest?(array, value)
   array.each do |item|
@@ -24,7 +24,7 @@ def largest?(array, value)
 end
 ```
 
-Snippet 2 - Big O:
+Snippet 2 - Big O: O(n), because the 2x as many iterations as there are items in the array (linear).
 ```ruby
 def info_dump(customers)
   puts "Customer Names: "
@@ -38,14 +38,14 @@ def info_dump(customers)
 end
 ```
 
-Snippet 3 - Big O:
+Snippet 3 - Big O: O(1), because the method always only looks at one element, no matter how big the array is.
 ```ruby
 def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
 ```
 
-Snippet 4 - Big O:
+Snippet 4 - Big O: O(n^2), because two linear loops are nested, which means they are multiplied.
 ```ruby
 def duplicates?(array)
   array.each_with_index do |item1, index1|
@@ -58,7 +58,7 @@ def duplicates?(array)
 end
 ```
 
-Snippet 5 - Big O:
+Snippet 5 - Big O: O(n*m), because two linear loops are nested, which means they are multiplied. It is O(n*m) rather than O(n^2) because the two loops do not depend on each other.
 ```ruby
 words = [chocolate, coconut, rainbow]
 endings = [cookie, pie, waffle]
@@ -70,7 +70,7 @@ words.each do |word|
 end
 ```
 
-Snippet 6 - Big O:
+Snippet 6 - Big O: O(n), because the number of iterations increases 1:1 with the array size.
 ```ruby
 numbers = # some array (you don't know contents)
 
@@ -79,7 +79,7 @@ def print_array(array)
 end
 ```
 
-Snippet 7 - Big O:
+Snippet 7 - O(n^2), because two linear loops are nested, which means they are multiplied.
 ```ruby
 # this is insertion sort
 (2...num.length).each do |j|
@@ -93,7 +93,7 @@ Snippet 7 - Big O:
 end
 ```
 
-Snippet 8 - Big O:
+Snippet 8 - Big O: O(n^2), because two linear loops are nested, which means they are multiplied.
 ```ruby
 # this is selection sort
 n.times do |i|
