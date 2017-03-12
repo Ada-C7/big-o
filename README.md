@@ -15,6 +15,8 @@
 ### Problems for you
 
 Snippet 1 - Big O:
+This example is Big O(n)/linear because it's going through each item in the array, looking at that particilat item, and determining whether or not it is greater than the given value in the argument. If more elements are added to the array the additional time it will take to process will be proprtional to the elements added.
+
 ```ruby
 def largest?(array, value)
   array.each do |item|
@@ -25,6 +27,8 @@ end
 ```
 
 Snippet 2 - Big O:
+This example is Big O(n)/linear because for each customer it is returning the customer's name and location. The amounf of time it will take to process the information is proportional to the number of elements in the customers hash. 
+
 ```ruby
 def info_dump(customers)
   puts "Customer Names: "
@@ -39,6 +43,8 @@ end
 ```
 
 Snippet 3 - Big O:
+This example is Big O(1)/constant because it is only looking at the fist element of the array and returning whether the statement is true or false. The length of the array does not matter in this case because it is only concerned about the first element.
+
 ```ruby
 def first_element_is_red?(array)
   array[0] == 'red' ? true : false
@@ -46,6 +52,8 @@ end
 ```
 
 Snippet 4 - Big O:
+This example is Big O(n^2)/logrithmic because of the nested array.each loops. 
+
 ```ruby
 def duplicates?(array)
   array.each_with_index do |item1, index1|
@@ -59,6 +67,8 @@ end
 ```
 
 Snippet 5 - Big O:
+This example is Big O(n^2)/logrithmic because it is iterating over each element from the words array while also iterating over each element from the endings array and adding them together to crate a new string. The nested loops make it logrithmic.
+
 ```ruby
 words = [chocolate, coconut, rainbow]
 endings = [cookie, pie, waffle]
@@ -71,6 +81,8 @@ end
 ```
 
 Snippet 6 - Big O:
+This example is Big O(n)/linear because for each element in the numbers array, the number will is being printed. If more items are added to the numbers array, the time it will take to execute is proportional to the number of elements added.
+
 ```ruby
 numbers = # some array (you don't know contents)
 
@@ -80,6 +92,8 @@ end
 ```
 
 Snippet 7 - Big O:
+This example is Big O(n^2)/logrithmic because it uses insertion sort.
+
 ```ruby
 # this is insertion sort
 (2...num.length).each do |j|
@@ -94,6 +108,8 @@ end
 ```
 
 Snippet 8 - Big O:
+This example is Big O(n^2)/logrithmic because it uses selection sort.
+
 ```ruby
 # this is selection sort
 n.times do |i|
