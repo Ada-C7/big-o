@@ -15,6 +15,9 @@
 ### Problems for you
 
 Snippet 1 - Big O:
+
+**O(N)**, we are iterating through each element, which means the performance of this algorithm is proportional to the amount of items in the array since we are operating on each element once.
+
 ```ruby
 def largest?(array, value)
   array.each do |item|
@@ -25,6 +28,9 @@ end
 ```
 
 Snippet 2 - Big O:
+
+**O(N)**, we have two separate loops that are not dependent on each other. In big O, we only care about the element with the greatest latency/longest processing time. Both take the same amount of time - operating on each element once.
+
 ```ruby
 def info_dump(customers)
   puts "Customer Names: "
@@ -39,6 +45,9 @@ end
 ```
 
 Snippet 3 - Big O:
+
+**O(1)**, no-growth curve/not affected by the size of the array. `first_element_is_red` is only concerned about whether an element is red.
+
 ```ruby
 def first_element_is_red?(array)
   array[0] == 'red' ? true : false
@@ -46,6 +55,9 @@ end
 ```
 
 Snippet 4 - Big O:
+
+**O(N^2)**, we have two nested loops each operating on one element at a time. So each loop is O(N), and since they're nested, it becomes an exponential operation.
+
 ```ruby
 def duplicates?(array)
   array.each_with_index do |item1, index1|
@@ -59,6 +71,9 @@ end
 ```
 
 Snippet 5 - Big O:
+
+**O(N*M)**, we have two loops that are nested BUT do not depend on each other. Both are linear and we combine their times.
+
 ```ruby
 words = [chocolate, coconut, rainbow]
 endings = [cookie, pie, waffle]
@@ -71,6 +86,9 @@ end
 ```
 
 Snippet 6 - Big O:
+
+**O(N)**, each element is visited once, a linear operation.
+
 ```ruby
 numbers = # some array (you don't know contents)
 
@@ -80,6 +98,9 @@ end
 ```
 
 Snippet 7 - Big O:
+
+**O(N^2)**, we have nested loops, `.each` and `while` which are dependent on each other so we'll have an exponential operation. Insertion sort is also known to have a complexity of O(N^2).
+
 ```ruby
 # this is insertion sort
 (2...num.length).each do |j|
@@ -94,6 +115,9 @@ end
 ```
 
 Snippet 8 - Big O:
+
+**O(N^2)**, we have nested loops, `.times` and `.upto` which are dependent on each other so we'll have an exponential operation. Selection sort is also known to have a complexity of O(N^2).
+
 ```ruby
 # this is selection sort
 n.times do |i|
