@@ -23,6 +23,7 @@ def largest?(array, value)
   return true
 end
 ```
+Answer: O(n) - Since comparing item to value is constant work
 
 Snippet 2 - Big O:
 ```ruby
@@ -37,6 +38,7 @@ def info_dump(customers)
   end
 end
 ```
+Answer: O(n) - Since puts-ing a message for every element is constant work
 
 Snippet 3 - Big O:
 ```ruby
@@ -44,6 +46,7 @@ def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
 ```
+Answer: O(1) - Since only one element is being worked on, the algorithm will always take the same amount of time
 
 Snippet 4 - Big O:
 ```ruby
@@ -57,6 +60,7 @@ def duplicates?(array)
   false
 end
 ```
+Answer: O(n^2) - Since adding another element to array will double the work due to the method comparing every element of the array to every other element
 
 Snippet 5 - Big O:
 ```ruby
@@ -69,6 +73,7 @@ words.each do |word|
   end
 end
 ```
+Answer: O(x^n) - Since the computation time will increase exponentially if the arrays got larger
 
 Snippet 6 - Big O:
 ```ruby
@@ -78,6 +83,7 @@ def print_array(array)
     array.each {|num| puts num}
 end
 ```
+Answer: O(n) - Since puts-ing each element is constant work
 
 Snippet 7 - Big O:
 ```ruby
@@ -92,6 +98,7 @@ Snippet 7 - Big O:
     num[i+1] = key
 end
 ```
+Answer - O(log n) -  Since the elements under consideration begin at the [2] element
 
 Snippet 8 - Big O:
 ```ruby
@@ -104,3 +111,4 @@ n.times do |i|
   a[i], a[index_min] = a[index_min], a[i] if index_min != i
 end
 ```
+Answer: O(n^2) - Since every element in the array is compared to every other element
