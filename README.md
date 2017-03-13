@@ -14,7 +14,7 @@
 
 ### Problems for you
 
-Snippet 1 - Big O:
+Snippet 1 - Big O: O(n) - linear. As the data type (array in this case) increases in size, the more time it will take to complete the run of the code.
 ```ruby
 def largest?(array, value)
   array.each do |item|
@@ -24,7 +24,7 @@ def largest?(array, value)
 end
 ```
 
-Snippet 2 - Big O:
+Snippet 2 - Big O: O(n) - linear. There are two loops happening here. However it is not a loop within a loop, so Big O could also be written as O(n + n) => O(n). Again, meaning increase size in data vs time it takes for code to run is linear.
 ```ruby
 def info_dump(customers)
   puts "Customer Names: "
@@ -38,14 +38,14 @@ def info_dump(customers)
 end
 ```
 
-Snippet 3 - Big O:
+Snippet 3 - Big O: O(1) - constant. This code is only looking at the first element in an array and returning a boolean. There isn't any iterating over an array involved.
 ```ruby
 def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
 ```
 
-Snippet 4 - Big O:
+Snippet 4 - Big O: O(n^2) - quadratic. There is a loop within a loop in the below code snippet, this means array will be iterated through one data type twice every time the code runs.
 ```ruby
 def duplicates?(array)
   array.each_with_index do |item1, index1|
@@ -58,7 +58,7 @@ def duplicates?(array)
 end
 ```
 
-Snippet 5 - Big O:
+Snippet 5 - Big O: O(n * m). With two different arrays, the loop iterates through one and then iterates through the other but does not iterate through either of the arrays more than once.
 ```ruby
 words = [chocolate, coconut, rainbow]
 endings = [cookie, pie, waffle]
@@ -70,7 +70,7 @@ words.each do |word|
 end
 ```
 
-Snippet 6 - Big O:
+Snippet 6 - Big O: O(n) - linear. The larger the array, the longer this loop will take to run.
 ```ruby
 numbers = # some array (you don't know contents)
 
@@ -79,7 +79,7 @@ def print_array(array)
 end
 ```
 
-Snippet 7 - Big O:
+Snippet 7 - Big O: O(n^2) - quadratic. For each element in the data set, the data might have to be checked more than once when code is run.
 ```ruby
 # this is insertion sort
 (2...num.length).each do |j|
@@ -93,7 +93,7 @@ Snippet 7 - Big O:
 end
 ```
 
-Snippet 8 - Big O:
+Snippet 8 - Big O: O(n^2) - quadratic. Similar to Snippet 7. Also, they are both a loop within a loop where both loops iterate through the same set of data.
 ```ruby
 # this is selection sort
 n.times do |i|
