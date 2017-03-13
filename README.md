@@ -23,6 +23,10 @@ def largest?(array, value)
   return true
 end
 ```
+Efficiency: O(n) or linear
+
+Justify: The worst case is for each loop part of the method which is iterating through an array.  The length of time it will take to complete the method is dependent on the number of items in the array.  The "return true" line seems like O(1), but that's best case, so I think we go with O(n).
+
 
 Snippet 2 - Big O:
 ```ruby
@@ -37,6 +41,10 @@ def info_dump(customers)
   end
 end
 ```
+Efficiency: O(n)
+
+Justify:  because the algorithm's performance is directly proportional to the size of the data set being processed.  It prints 2 lines for each customer.
+
 
 Snippet 3 - Big O:
 ```ruby
@@ -44,6 +52,9 @@ def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
 ```
+Efficiency: O(1)
+
+Justify:  Constant or no growth curve because the method only ever looks at the element at the 0 index of an array.
 
 Snippet 4 - Big O:
 ```ruby
@@ -57,6 +68,9 @@ def duplicates?(array)
   false
 end
 ```
+Efficiency: O(log n)
+
+Justify: It has a nested loop to go through the array and make the comparison, but it isn't a case where the algorithm increases exponentially.
 
 Snippet 5 - Big O:
 ```ruby
@@ -69,6 +83,9 @@ words.each do |word|
   end
 end
 ```
+Efficiency: O(n^2) or Quadratic
+
+Justify:  Big O Quadratic here because the nested each loop results in the words having to be multiplied by each ending.  The printed results will be in the amount of words x endings.
 
 Snippet 6 - Big O:
 ```ruby
@@ -78,6 +95,9 @@ def print_array(array)
     array.each {|num| puts num}
 end
 ```
+Efficiency: O(n) or Linear
+
+Justify:  The length of the data set determines the algorithm's performance.  The method iterates through the array and prints each number once.
 
 Snippet 7 - Big O:
 ```ruby
@@ -92,6 +112,9 @@ Snippet 7 - Big O:
     num[i+1] = key
 end
 ```
+Efficiency: O(n^2)
+
+Justify: Quadratic because the work of the sort function increases exponentially based on the number of items to sort.
 
 Snippet 8 - Big O:
 ```ruby
@@ -104,3 +127,6 @@ n.times do |i|
   a[i], a[index_min] = a[index_min], a[i] if index_min != i
 end
 ```
+Efficiency: O(n^2)
+
+Justify: Quadratic because the work of the sort function increases exponentially based on the number of items to sort.
