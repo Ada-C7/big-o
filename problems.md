@@ -10,7 +10,7 @@ def largest?(array, value)
 end
 
 ANSWER: Efficiency is linear, O(n), where n is the size of the array.
- This is because the code runs through each element in the array once. 
+ This is because the code runs through each element in the array once.
 ```````````````````````````````````````
 
 Snippet 2 - Big O:
@@ -25,14 +25,26 @@ def info_dump(customers)
     puts "#{customer[:country]}"
   end
 end
-```
+
+ANSWER: Efficiency is linear, O(n), where n is the size of the array.
+ This is because the 2 loops run sequentially, and are not nested. Each loop runs through every element in the array once. This makes the efficiency n + n, or 2n, which is still linear, and is still considered O(n).
+```````````````````````````````````````
+
 
 Snippet 3 - Big O:
 ```ruby
 def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
-```
+
+ANSWER: Efficiency is constant, O(1).
+ This is because we are only looking at the first element in the array.
+ No matter how big the array is, we are only considering one element.  
+ 
+```````````````````````````````````````
+
+
+
 
 Snippet 4 - Big O:
 ```ruby
