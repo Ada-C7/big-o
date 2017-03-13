@@ -10,7 +10,7 @@ def largest?(array, value)
 end
 
 ANSWER: Big O: O(n), linear, where n is the size of the array.
- This is because the code runs through each element in the array once.
+This is because the code runs through each element in the array once, to compare it to the given value.
 ```````````````````````````````````````
 
 
@@ -28,7 +28,7 @@ def info_dump(customers)
 end
 
 ANSWER: Big O: O(n), linear, where n is the size of the array.
- This is because the 2 loops run sequentially, and are not nested. Each loop runs through every element in the array once. This makes the efficiency n + n, or 2n, which is still linear, and is still considered O(n).
+This is because the 2 loops run sequentially, and are not nested. Each loop runs through every element in the array once. This makes the efficiency n + n, or 2n, which is still linear, and is still considered O(n).
 ```````````````````````````````````````
 
 
@@ -103,7 +103,13 @@ Snippet 7 - Big O:
     end
     num[i+1] = key
 end
-```
+
+
+ANSWER: Big O: O(n^2), n-squared, where n is the size of the array.
+This the insertion sort algorithm., which has a (worst case) Big O of n^2, because element (which is used once as a key), must (in the worst case) be compared with every other element.
+(I think it's actually (1/2)(n^2) because once 2 elements have been compared, they won't be compared again, but in Big O terms, that is equivalent to an n^2 efficiency.)
+```````````````````````````````````````
+
 
 Snippet 8 - Big O:
 ```ruby
@@ -116,3 +122,7 @@ n.times do |i|
   a[i], a[index_min] = a[index_min], a[i] if index_min != i
 end
 ```
+ANSWER: Big O: O(n^2), n-squared, where n is the size of the array.
+This the selection sort algorithm, which has a (worst case) Big O of n^2,
+because for each of the n positions in the array, every element must be considered.
+```````````````````````````````````````
