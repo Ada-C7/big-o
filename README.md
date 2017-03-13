@@ -1,17 +1,4 @@
 # Evaluating Efficiency
-
-1. Read [Big O Notation for Newbies with Ruby](http://www.datakicks.com/2016/06/04/big-o-notation.html)
-2. Work through [this quiz](http://www.codequizzes.com/computer-science/beginner/big-o-algorithms) on Big O. Try out the code snippets and read the answers.
-3. Do the assignment below and submit a PR with your answers.
-
-
-## Assignment - Determine the big O
-1) Give the efficiency of each of the following code snippets and
-2) Justify your answer
-
-### Examples
-[Examples](examples.md)
-
 ### Problems for you
 
 Snippet 1 - Big O:
@@ -23,6 +10,8 @@ def largest?(array, value)
   return true
 end
 ```
+O(n)
+Time depends linearly on the number of items in the array
 
 Snippet 2 - Big O:
 ```ruby
@@ -37,6 +26,7 @@ def info_dump(customers)
   end
 end
 ```
+O(n) - method iterates over each element of the hash, so time efficiency for this method depends linearly on size of the hash (even though there are two loops that iterates over given hash)
 
 Snippet 3 - Big O:
 ```ruby
@@ -44,6 +34,7 @@ def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
 ```
+O(1) - constant time, because its speed doesn't depend on the size of array
 
 Snippet 4 - Big O:
 ```ruby
@@ -57,6 +48,7 @@ def duplicates?(array)
   false
 end
 ```
+O(n^2). This code has two loops which iterates over whole array.One loop gives us O(n), a second nested loop gives us O(n^2)
 
 Snippet 5 - Big O:
 ```ruby
@@ -69,6 +61,8 @@ words.each do |word|
   end
 end
 ```
+O(m*n), each loop runs in linear time (their time depends on size of arrays) and don't depend on each other
+
 
 Snippet 6 - Big O:
 ```ruby
@@ -78,6 +72,7 @@ def print_array(array)
     array.each {|num| puts num}
 end
 ```
+O(n), because loop iterates over all array, so time depends on array's size
 
 Snippet 7 - Big O:
 ```ruby
@@ -92,6 +87,7 @@ Snippet 7 - Big O:
     num[i+1] = key
 end
 ```
+O(n^2), because there are two loops, one of them is nested. Each loop iterates in worst case num.length times
 
 Snippet 8 - Big O:
 ```ruby
@@ -104,3 +100,4 @@ n.times do |i|
   a[i], a[index_min] = a[index_min], a[i] if index_min != i
 end
 ```
+O(n^2), because there two loops, one of them nested.Each loop depends on array size
