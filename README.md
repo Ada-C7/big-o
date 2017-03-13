@@ -14,7 +14,8 @@
 
 ### Problems for you
 
-Snippet 1 - Big O:
+Snippet 1 - Big O: O(n) - linear. As the data type (array in this case) increases in size, the more time it will take to complete the run of the code.
+
 ```ruby
 def largest?(array, value)
   array.each do |item|
@@ -24,7 +25,8 @@ def largest?(array, value)
 end
 ```
 
-Snippet 2 - Big O:
+Snippet 2 - Big O: O(n) - linear. There are two loops happening here. However it is not a loop within a loop, so Big O could also be written as O(n + n) => O(n). Again, meaning increase size in data vs time it takes for code to run is linear.
+
 ```ruby
 def info_dump(customers)
   puts "Customer Names: "
@@ -38,14 +40,14 @@ def info_dump(customers)
 end
 ```
 
-Snippet 3 - Big O:
+Snippet 3 - Big O: O(1) - constant. This code is only looking at the first element in an array and returning a boolean. There isn't any iterating over an array involved.
 ```ruby
 def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
 ```
 
-Snippet 4 - Big O:
+Snippet 4 - Big O: O(n^2) - quadratic. There is a loop within a loop in the below code snippet, this means array will be iterated through twice every time the code runs. 
 ```ruby
 def duplicates?(array)
   array.each_with_index do |item1, index1|
