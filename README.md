@@ -22,6 +22,10 @@ def largest?(array, value)
   end
   return true
 end
+
+O(n) Linear.  Because as the data set size grows the amount of loop iterations grows linearly.
+
+
 ```
 
 Snippet 2 - Big O:
@@ -36,6 +40,9 @@ def info_dump(customers)
     puts "#{customer[:country]}"
   end
 end
+
+O(n) Linear.  Even though there are two separate loops going on, the amount of loop iterations grow linearly as the data size increases.
+
 ```
 
 Snippet 3 - Big O:
@@ -43,6 +50,8 @@ Snippet 3 - Big O:
 def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
+
+O(1) Constant.  No matter how big the array becomes, the processing time to access the array[0] will be always the same.  
 ```
 
 Snippet 4 - Big O:
@@ -56,6 +65,9 @@ def duplicates?(array)
   end
   false
 end
+
+O(n^2) Quadratic.  Loop inside another loop.  As outer loop iterates, inner loop runs the same times(the length of the given array) as outer loop's iteration times. As the data size increases, processing time will be n * n, which makes it n^2.
+
 ```
 
 Snippet 5 - Big O:
@@ -68,6 +80,9 @@ words.each do |word|
     puts word + ending
   end
 end
+
+O(n * m) Quadratic.  Loop inside another loop.  As the outer loop iterates, for every word in words array(n), inner loop will go through each element in endings array(m).
+
 ```
 
 Snippet 6 - Big O:
@@ -77,6 +92,8 @@ numbers = # some array (you don't know contents)
 def print_array(array)
     array.each {|num| puts num}
 end
+
+O(n)  Linear.  As the size of numbers array increases, processing time will increase linearly.  If array.length is 5, it will iterate 5 times.  if array.length is 50, then it will iterate 50 times.  
 ```
 
 Snippet 7 - Big O:
@@ -91,6 +108,8 @@ Snippet 7 - Big O:
     end
     num[i+1] = key
 end
+
+O(n^2)  Loop inside another loop and a insertion sort has a complexity of O(n^2).
 ```
 
 Snippet 8 - Big O:
@@ -103,4 +122,6 @@ n.times do |i|
   end
   a[i], a[index_min] = a[index_min], a[i] if index_min != i
 end
+
+O(n^2). Loop inside another loop.  Selection sort has a complexity of O(n^2)
 ```
