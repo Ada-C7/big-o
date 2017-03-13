@@ -23,6 +23,7 @@ def largest?(array, value)
   return true
 end
 ```
+TW: This is an O(n) problem, because the complexity of it is dependent on the size of the array (n). 
 
 Snippet 2 - Big O:
 ```ruby
@@ -37,6 +38,7 @@ def info_dump(customers)
   end
 end
 ```
+TW: This is an O(n) problem, while there are 2 (n) loops, they happen in succession (2n) and so the complexity still remains O(n). 
 
 Snippet 3 - Big O:
 ```ruby
@@ -44,6 +46,7 @@ def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
 ```
+TW: This is an O(1) problem, while it's an array -- the size of the array is irrelevant in the code and the only input required is the array[0].
 
 Snippet 4 - Big O:
 ```ruby
@@ -58,6 +61,8 @@ def duplicates?(array)
 end
 ```
 
+TW: This is an O(n^2) problem, there are two loops which iterate on an array. If the array had a size of 10, there would be 100 iterations from these 2 loops.
+
 Snippet 5 - Big O:
 ```ruby
 words = [chocolate, coconut, rainbow]
@@ -70,6 +75,8 @@ words.each do |word|
 end
 ```
 
+TW: This is an O(n^2) problem, because of the nested loops which have to run through all the combinations of both arrays.
+
 Snippet 6 - Big O:
 ```ruby
 numbers = # some array (you don't know contents)
@@ -78,6 +85,8 @@ def print_array(array)
     array.each {|num| puts num}
 end
 ```
+
+TW: This is an O(n) problem, because the complexity of it is only dependent on the size of the array (n). 
 
 Snippet 7 - Big O:
 ```ruby
@@ -93,6 +102,8 @@ Snippet 7 - Big O:
 end
 ```
 
+TW: This is an O(n^2) problem, the while loop nested within has a complexity of n, and the outside .each loop also has a complexity of n. Nested, this becomes an O(n^2) complexity.
+
 Snippet 8 - Big O:
 ```ruby
 # this is selection sort
@@ -104,3 +115,4 @@ n.times do |i|
   a[i], a[index_min] = a[index_min], a[i] if index_min != i
 end
 ```
+TW: This is an O(n^2) problem, because of the nested array within the .times loop. 
