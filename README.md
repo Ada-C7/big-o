@@ -14,7 +14,8 @@
 
 ### Problems for you
 
-Snippet 1 - Big O:
+Snippet 1 - Big O: O(n) because you only cycle through the array one time.
+
 ```ruby
 def largest?(array, value)
   array.each do |item|
@@ -24,7 +25,10 @@ def largest?(array, value)
 end
 ```
 
-Snippet 2 - Big O:
+
+
+Snippet 2 - Big O: O(2n) because you cycle through each element (each customer) twice.
+
 ```ruby
 def info_dump(customers)
   puts "Customer Names: "
@@ -38,14 +42,15 @@ def info_dump(customers)
 end
 ```
 
-Snippet 3 - Big O:
+Snippet 3 - Big O: O(1) describes an algorithm that will always execute in the same time (or space) regardless of the size of the input data set.
+
 ```ruby
 def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
 ```
 
-Snippet 4 - Big O:
+Snippet 4 - Big O: O(n^2) because you have a loop inside of another loop.
 ```ruby
 def duplicates?(array)
   array.each_with_index do |item1, index1|
@@ -58,7 +63,7 @@ def duplicates?(array)
 end
 ```
 
-Snippet 5 - Big O:
+Snippet 5 - Big O: O(n * m)because the two loops do not depend on each other but both run linearly in time
 ```ruby
 words = [chocolate, coconut, rainbow]
 endings = [cookie, pie, waffle]
@@ -70,7 +75,8 @@ words.each do |word|
 end
 ```
 
-Snippet 6 - Big O:
+Snippet 6 - Big O: O(n) becase we just have n elements... although that number is undefined.
+
 ```ruby
 numbers = # some array (you don't know contents)
 
@@ -79,7 +85,7 @@ def print_array(array)
 end
 ```
 
-Snippet 7 - Big O:
+Snippet 7 - Big O: O(n^2) because it goes through the array & for each element hyou need to compare it to teh previously touched element... and by the last one it is comparing it with every single other element.
 ```ruby
 # this is insertion sort
 (2...num.length).each do |j|
@@ -93,7 +99,8 @@ Snippet 7 - Big O:
 end
 ```
 
-Snippet 8 - Big O:
+Snippet 8 - Big O: (n^2) because it compares each element with every other element.
+
 ```ruby
 # this is selection sort
 n.times do |i|
