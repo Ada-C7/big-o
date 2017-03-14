@@ -4,7 +4,9 @@ Thanks for doing some brain yoga. You are now submitting this assignment!
 ## Comprehension Questions
 |  Question 	|  Answer 	|
 |------------	| ---------	|
-|  What is Big-O?	|   	|
-|  What are other words we can use to mean Big-O?	|   	|
-|  What is latency?	|   	|
-|  When we describe an algorithm using `n`, what is `n`?	|   	|
+|  What is Big-O?	| Big O notation is used to describe the performance/complexity of an algorithm. Big O specifically describes the worst-case scenario, and can be used to describe the execution time required or the space used (e.g. in memory or on disk) by an algorithm.
+
+  	|
+|  What are other words we can use to mean Big-O?	| efficiency, performance & complexity are other terms we can use when talking about abstract ideas around the performance & speed of our algorithms.   |
+|  What is latency?	|  Latency is the amount of time a message takes to travel through a 'system' and give you your results.  	|
+|  When we describe an algorithm using `n`, what is `n`?	|  N is teh variable which describes the 'problem space' in which we are working within.   	|
