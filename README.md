@@ -23,6 +23,8 @@ def largest?(array, value)
   return true
 end
 ```
+Efficiency: O(n) or linear because the code runs upon each element in the array just one at a time to compare it to the given value.
+
 
 Snippet 2 - Big O:
 ```ruby
@@ -37,6 +39,7 @@ def info_dump(customers)
   end
 end
 ```
+Efficiency: O(n) or linear because the code runs upon each element in the array just one at a time to compare it to the given value.
 
 Snippet 3 - Big O:
 ```ruby
@@ -44,6 +47,7 @@ def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
 ```
+Efficiency: O(1) because the code considers only the first element in the array regardless of the array size.
 
 Snippet 4 - Big O:
 ```ruby
@@ -57,6 +61,7 @@ def duplicates?(array)
   false
 end
 ```
+Efficiency: O(n^2) because due to the nested loop in the array, we need to think every single element in the array so the element is counted as n*n times.
 
 Snippet 5 - Big O:
 ```ruby
@@ -69,6 +74,7 @@ words.each do |word|
   end
 end
 ```
+Efficiency: O(n*m) or Quadratic due to nested loop. When the outer loop iterates, every single element in words array(n), inner loop will go through each element in array(m).
 
 Snippet 6 - Big O:
 ```ruby
@@ -78,6 +84,7 @@ def print_array(array)
     array.each {|num| puts num}
 end
 ```
+Efficiency: O(n) or Linear because the code runs upon each element in the array just one at a time to compare it to the given value.
 
 Snippet 7 - Big O:
 ```ruby
@@ -92,6 +99,7 @@ Snippet 7 - Big O:
     num[i+1] = key
 end
 ```
+Efficiency: O(n^2) because of nested loop and insertion sort have a complexity of it.
 
 Snippet 8 - Big O:
 ```ruby
@@ -104,3 +112,4 @@ n.times do |i|
   a[i], a[index_min] = a[index_min], a[i] if index_min != i
 end
 ```
+Efficiency: O(n^2) due to nested loop and selection sort has a complexity of O(n^2)
