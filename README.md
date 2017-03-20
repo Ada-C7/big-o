@@ -23,6 +23,7 @@ def largest?(array, value)
   return true
 end
 ```
+This is O(n) because each element is accessed linearly (one by one), and this does not change as the data set grows.
 
 Snippet 2 - Big O:
 ```ruby
@@ -38,12 +39,16 @@ def info_dump(customers)
 end
 ```
 
+This is O(n) because even though there are two loops, they are not nested and both access the element linesrly.
+
 Snippet 3 - Big O:
 ```ruby
 def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
 ```
+
+This is O(1) or constant because only one element is accessed.
 
 Snippet 4 - Big O:
 ```ruby
@@ -58,6 +63,8 @@ def duplicates?(array)
 end
 ```
 
+This is O(n^2) because the loops are both O(n) loops, and multiplying them together gets O(n^2)
+
 Snippet 5 - Big O:
 ```ruby
 words = [chocolate, coconut, rainbow]
@@ -69,6 +76,8 @@ words.each do |word|
   end
 end
 ```
+This is O(n * m) because the loops are nested and each are accessing a different element, so are running linearly independently.
+
 
 Snippet 6 - Big O:
 ```ruby
@@ -78,6 +87,7 @@ def print_array(array)
     array.each {|num| puts num}
 end
 ```
+This is O(n) because it acts linearly, accessing the array one element at a time and enumerating through it.
 
 Snippet 7 - Big O:
 ```ruby
@@ -92,6 +102,7 @@ Snippet 7 - Big O:
     num[i+1] = key
 end
 ```
+This is O(n^2), because in the worst case all elements in num key must be compared to all other elements.
 
 Snippet 8 - Big O:
 ```ruby
@@ -104,3 +115,5 @@ n.times do |i|
   a[i], a[index_min] = a[index_min], a[i] if index_min != i
 end
 ```
+
+This is O(n^2), because in the nested loop all elements of the n array must be considered.
