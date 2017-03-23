@@ -14,7 +14,7 @@
 
 ### Problems for you
 
-Snippet 1 - Big O:
+Snippet 1 - Big O(n) - in worst case scenario we would go through the entire array, which means the performance would be directly proportional to the size (length) of the array.
 ```ruby
 def largest?(array, value)
   array.each do |item|
@@ -24,7 +24,7 @@ def largest?(array, value)
 end
 ```
 
-Snippet 2 - Big O:
+Snippet 2 - Big O(n) - there are two loops, and each is linear O(n),and because they follow each other (are not nested), they don't increase each other and the growth rate remains linear. 
 ```ruby
 def info_dump(customers)
   puts "Customer Names: "
@@ -38,14 +38,14 @@ def info_dump(customers)
 end
 ```
 
-Snippet 3 - Big O:
+Snippet 3 - Big O(1) - we always access the value at index 0, therefore the operation time remains the same for any length array.
 ```ruby
 def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
 ```
 
-Snippet 4 - Big O:
+Snippet 4 - Big O(n^2) - the operation time increases exponentially, because the loops are nested. The inner loop scales linearly with the input size, and it has to be executed for each element in the outer loop, therefore multiplying the size of the input by itself.
 ```ruby
 def duplicates?(array)
   array.each_with_index do |item1, index1|
@@ -58,7 +58,7 @@ def duplicates?(array)
 end
 ```
 
-Snippet 5 - Big O:
+Snippet 5 - Big O(n * m) - the inner loop has to be executed for each element of the outer loop, therefore the loops are multipled. We notate it as (n * m) rather than (n^2), because they are not dependent on each other.
 ```ruby
 words = [chocolate, coconut, rainbow]
 endings = [cookie, pie, waffle]
@@ -70,7 +70,7 @@ words.each do |word|
 end
 ```
 
-Snippet 6 - Big O:
+Snippet 6 - Big O(n) - the operation time scales linearly with the size of the input
 ```ruby
 numbers = # some array (you don't know contents)
 
@@ -79,7 +79,7 @@ def print_array(array)
 end
 ```
 
-Snippet 7 - Big O:
+Snippet 7 - Big O(n^2) - two nested loops, the length of each loop is relative to the length of the input. Since they are nested, they are multiplied.
 ```ruby
 # this is insertion sort
 (2...num.length).each do |j|
@@ -93,7 +93,7 @@ Snippet 7 - Big O:
 end
 ```
 
-Snippet 8 - Big O:
+Snippet 8 - Big O(n^2) - two nested loops, the length of each loop is relative to the length of the input. Since they are nested, they are multiplied.
 ```ruby
 # this is selection sort
 n.times do |i|
