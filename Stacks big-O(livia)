@@ -1,0 +1,7 @@
+1. o(n) Linear - We iterate over every element in the array.
+2. o(n) Linear - There are two, un-nested loops here, so we'll add instead of mult.
+3. o(1) Constant - Because we're only checkig one element.
+4. o(n2) Quadratic - We have two loops here, one nested and we'll have to iterate through both.
+5. o(n * m) - There are two linear loops here, independent of each other.
+6. o(n) Linear - Once through the array.
+7. o(n2) Quadratic - Since we have to loop, then loop again (potentially to the end) to check against each one.
