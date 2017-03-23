@@ -14,7 +14,7 @@
 
 ### Problems for you
 
-Snippet 1 - Big O:
+Snippet 1 - Big O: n #For the worst case scenario, each element in the array will be looped through as their value remains smaller than the value
 ```ruby
 def largest?(array, value)
   array.each do |item|
@@ -24,7 +24,7 @@ def largest?(array, value)
 end
 ```
 
-Snippet 2 - Big O:
+Snippet 2 - Big O: n #O(n+n) = (2n) which becomes (n). Each element is looped through in separate operations
 ```ruby
 def info_dump(customers)
   puts "Customer Names: "
@@ -38,14 +38,14 @@ def info_dump(customers)
 end
 ```
 
-Snippet 3 - Big O:
+Snippet 3 - Big O: (1) #We are on;y checking the first element here
 ```ruby
 def first_element_is_red?(array)
   array[0] == 'red' ? true : false
 end
 ```
 
-Snippet 4 - Big O:
+Snippet 4 - Big O: (n^2) #Nested loops, each array will run O(n).
 ```ruby
 def duplicates?(array)
   array.each_with_index do |item1, index1|
@@ -58,7 +58,7 @@ def duplicates?(array)
 end
 ```
 
-Snippet 5 - Big O:
+Snippet 5 - Big O: O(n*m) Each loop will run linearly in time indepently of each other.
 ```ruby
 words = [chocolate, coconut, rainbow]
 endings = [cookie, pie, waffle]
@@ -70,7 +70,7 @@ words.each do |word|
 end
 ```
 
-Snippet 6 - Big O:
+Snippet 6 - Big O:(n) #Each array is only visited once
 ```ruby
 numbers = # some array (you don't know contents)
 
@@ -79,7 +79,7 @@ def print_array(array)
 end
 ```
 
-Snippet 7 - Big O:
+Snippet 7 - Big O: (n^2) #Nested loops
 ```ruby
 # this is insertion sort
 (2...num.length).each do |j|
@@ -93,7 +93,7 @@ Snippet 7 - Big O:
 end
 ```
 
-Snippet 8 - Big O:
+Snippet 8 - Big O: (n^2) #Nested loops 
 ```ruby
 # this is selection sort
 n.times do |i|
